@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Da7nzmb0llw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Zhuowei\\Desktop\\Jsonhomework\\JsonInheritanceAssignment\\JsonInheritanceAssignment.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Zhuowei\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

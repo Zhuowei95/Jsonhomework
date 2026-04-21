@@ -1,0 +1,17 @@
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\bin\Debug\net10.0\JsonInheritanceAssignment.exe
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\bin\Debug\net10.0\JsonInheritanceAssignment.deps.json
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\bin\Debug\net10.0\JsonInheritanceAssignment.runtimeconfig.json
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\bin\Debug\net10.0\JsonInheritanceAssignment.dll
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\bin\Debug\net10.0\JsonInheritanceAssignment.pdb
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\bin\Debug\net10.0\Newtonsoft.Json.dll
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\obj\Debug\net10.0\JsonInheritanceAssignment.csproj.AssemblyReference.cache
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\obj\Debug\net10.0\JsonInheritanceAssignment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\obj\Debug\net10.0\JsonInheritanceAssignment.AssemblyInfoInputs.cache
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\obj\Debug\net10.0\JsonInheritanceAssignment.AssemblyInfo.cs
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\obj\Debug\net10.0\JsonInheritanceAssignment.csproj.CoreCompileInputs.cache
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\obj\Debug\net10.0\JsonInhe.087A2B73.Up2Date
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\obj\Debug\net10.0\JsonInheritanceAssignment.dll
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\obj\Debug\net10.0\refint\JsonInheritanceAssignment.dll
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\obj\Debug\net10.0\JsonInheritanceAssignment.pdb
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\obj\Debug\net10.0\JsonInheritanceAssignment.genruntimeconfig.cache
+C:\Users\Zhuowei\Desktop\Jsonhomework\JsonInheritanceAssignment\obj\Debug\net10.0\ref\JsonInheritanceAssignment.dll
