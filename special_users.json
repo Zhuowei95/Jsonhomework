@@ -1,0 +1,23 @@
+[
+  {
+    "UserType": "Admin",
+    "Name": "Alice Brown",
+    "Age": 35,
+    "City": "Vilnius",
+    "AccessLevel": "Full"
+  },
+  {
+    "UserType": "RegularUser",
+    "Name": "Bob Green",
+    "Age": 27,
+    "City": "Kaunas",
+    "MembershipType": "Gold"
+  },
+  {
+    "UserType": "RegularUser",
+    "Name": "Cathy White",
+    "Age": 22,
+    "City": "Siauliai",
+    "MembershipType": "Standard"
+  }
+]

@@ -1,29 +1,48 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using System.IO;
 
 class Program
 {
     static void Main(string[] args)
     {
+        string filePath = "special_users.json";
+
+        if (!File.Exists(filePath))
+        {
+            Console.WriteLine("File not found: " + filePath);
+            return;
+        }
+
+        string jsonData = File.ReadAllText(filePath);
+
+        JArray jsonArray = JArray.Parse(jsonData);
         List<User> users = new List<User>();
 
-        users.Add(new Admin
+        foreach (JObject item in jsonArray)
         {
-            Name = "Admin Alice",
-            Age = 35,
-            City = "Vilnius",
-            AccessLevel = "Full"
-        });
+            string? userType = item["UserType"]?.ToString();
 
-        users.Add(new RegularUser
-        {
-            Name = "User Bob",
-            Age = 24,
-            City = "Siauliai",
-            MembershipType = "Gold"
-        });
+            if (userType == "Admin")
+            {
+                Admin? admin = item.ToObject<Admin>();
+                if (admin != null)
+                {
+                    users.Add(admin);
+                }
+            }
+            else if (userType == "RegularUser")
+            {
+                RegularUser? regularUser = item.ToObject<RegularUser>();
+                if (regularUser != null)
+                {
+                    users.Add(regularUser);
+                }
+            }
+        }
 
-        Console.WriteLine("Task 4: Inheritance with specialized user types");
+        Console.WriteLine("Task 5: Deserialize specialized user types from JSON");
         Console.WriteLine();
 
         foreach (User user in users)
