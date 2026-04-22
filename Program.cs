@@ -7,46 +7,33 @@ class Program
 {
     static void Main(string[] args)
     {
-        string inputFile = "users.json";
-        string outputFile = "users_updated.json";
+        string filePath = "users_updated.json";
 
-        if (!File.Exists(inputFile))
+        if (!File.Exists(filePath))
         {
-            Console.WriteLine("File not found: " + inputFile);
+            Console.WriteLine("File not found: " + filePath);
             return;
         }
 
-        string jsonData = File.ReadAllText(inputFile);
-        User? originalUser = JsonConvert.DeserializeObject<User>(jsonData);
+        string jsonData = File.ReadAllText(filePath);
 
-        if (originalUser == null)
+        List<User>? users = JsonConvert.DeserializeObject<List<User>>(jsonData);
+
+        if (users == null || users.Count == 0)
         {
-            Console.WriteLine("Failed to read original user.");
+            Console.WriteLine("No users found in JSON file.");
             return;
         }
 
-        List<User> users = new List<User>();
-        users.Add(originalUser);
+        Console.WriteLine("Task 3: Deserialize all entries with LOOP");
+        Console.WriteLine();
 
-        users.Add(new User
+        foreach (User user in users)
         {
-            Name = "Alice Brown",
-            Age = 25,
-            City = "Vilnius"
-        });
-
-        users.Add(new User
-        {
-            Name = "Michael Green",
-            Age = 28,
-            City = "Kaunas"
-        });
-
-        string updatedJson = JsonConvert.SerializeObject(users, Formatting.Indented);
-        File.WriteAllText(outputFile, updatedJson);
-
-        Console.WriteLine("Task 2: Added new entries to JSON object");
-        Console.WriteLine("Updated data saved to: " + outputFile);
-        Console.WriteLine(updatedJson);
+            Console.WriteLine("Name: " + user.Name);
+            Console.WriteLine("Age: " + user.Age);
+            Console.WriteLine("City: " + user.City);
+            Console.WriteLine("----------------------");
+        }
     }
 }
