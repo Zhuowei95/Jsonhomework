@@ -1,38 +1,50 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 
 class Program
 {
     static void Main(string[] args)
     {
-        string filePath = "users_updated.json";
+        List<User> users = new List<User>();
 
-        if (!File.Exists(filePath))
+        users.Add(new Admin
         {
-            Console.WriteLine("File not found: " + filePath);
-            return;
-        }
+            Name = "Admin Alice",
+            Age = 35,
+            City = "Vilnius",
+            AccessLevel = "Full"
+        });
 
-        string jsonData = File.ReadAllText(filePath);
-
-        List<User>? users = JsonConvert.DeserializeObject<List<User>>(jsonData);
-
-        if (users == null || users.Count == 0)
+        users.Add(new RegularUser
         {
-            Console.WriteLine("No users found in JSON file.");
-            return;
-        }
+            Name = "User Bob",
+            Age = 24,
+            City = "Siauliai",
+            MembershipType = "Gold"
+        });
 
-        Console.WriteLine("Task 3: Deserialize all entries with LOOP");
+        Console.WriteLine("Task 4: Inheritance with specialized user types");
         Console.WriteLine();
 
         foreach (User user in users)
         {
-            Console.WriteLine("Name: " + user.Name);
-            Console.WriteLine("Age: " + user.Age);
-            Console.WriteLine("City: " + user.City);
+            if (user is Admin admin)
+            {
+                Console.WriteLine("Admin");
+                Console.WriteLine("Name: " + admin.Name);
+                Console.WriteLine("Age: " + admin.Age);
+                Console.WriteLine("City: " + admin.City);
+                Console.WriteLine("Access Level: " + admin.AccessLevel);
+            }
+            else if (user is RegularUser regularUser)
+            {
+                Console.WriteLine("Regular User");
+                Console.WriteLine("Name: " + regularUser.Name);
+                Console.WriteLine("Age: " + regularUser.Age);
+                Console.WriteLine("City: " + regularUser.City);
+                Console.WriteLine("Membership Type: " + regularUser.MembershipType);
+            }
+
             Console.WriteLine("----------------------");
         }
     }
