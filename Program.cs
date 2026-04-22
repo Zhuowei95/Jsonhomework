@@ -1,33 +1,52 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 class Program
 {
     static void Main(string[] args)
     {
-        string filePath = "users.json";
+        string inputFile = "users.json";
+        string outputFile = "users_updated.json";
 
-        if (!File.Exists(filePath))
+        if (!File.Exists(inputFile))
         {
-            Console.WriteLine("File not found: " + filePath);
+            Console.WriteLine("File not found: " + inputFile);
             return;
         }
 
-        string jsonData = File.ReadAllText(filePath);
+        string jsonData = File.ReadAllText(inputFile);
+        User? originalUser = JsonConvert.DeserializeObject<User>(jsonData);
 
-User? user = JsonConvert.DeserializeObject<User>(jsonData);
+        if (originalUser == null)
+        {
+            Console.WriteLine("Failed to read original user.");
+            return;
+        }
 
-if (user != null)
-{
-    Console.WriteLine("Task 1: Read JSON file");
-    Console.WriteLine("Name: " + user.Name);
-    Console.WriteLine("Age: " + user.Age);
-    Console.WriteLine("City: " + user.City);
-}
-else
-{
-    Console.WriteLine("Failed to deserialize JSON data.");
-}
+        List<User> users = new List<User>();
+        users.Add(originalUser);
+
+        users.Add(new User
+        {
+            Name = "Alice Brown",
+            Age = 25,
+            City = "Vilnius"
+        });
+
+        users.Add(new User
+        {
+            Name = "Michael Green",
+            Age = 28,
+            City = "Kaunas"
+        });
+
+        string updatedJson = JsonConvert.SerializeObject(users, Formatting.Indented);
+        File.WriteAllText(outputFile, updatedJson);
+
+        Console.WriteLine("Task 2: Added new entries to JSON object");
+        Console.WriteLine("Updated data saved to: " + outputFile);
+        Console.WriteLine(updatedJson);
     }
 }

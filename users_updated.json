@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "John Wu",
+    "Age": 30,
+    "City": "Siauliai"
+  },
+  {
+    "Name": "Alice Brown",
+    "Age": 25,
+    "City": "Vilnius"
+  },
+  {
+    "Name": "Michael Green",
+    "Age": 28,
+    "City": "Kaunas"
+  }
+]
